@@ -1,6 +1,17 @@
 # Semantic Segmentation
 ### Introduction
-In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
+
+In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN). based on a pre-trained VGG16 image classifier. The goal is to classify each image pixel as road / not-road. VGG-16 network is used to extract input, keep probability, layer 3, 4 and 7. Performance is improved using skipped connection, performing 1x1 convolutions ( layers 3 and 4) and adding them element-wise.  The training data set  is the kitti dataset. 
+
+ The following hyperparameters were selected:
+ 
+keep_prob: 0.5
+learning_rate: 0.00001
+epochs: 50
+batch_size: 5
+
+
+The sample images are presented in run dir.
 
 ### Setup
 ##### GPU
